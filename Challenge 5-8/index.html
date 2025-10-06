@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise</title>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Challenge VII-->
+  <button onclick="printList()">Show List</button>
+
+  <!-- Challenge VIII-->
+  <div style="margin-top: 1rem;">
+    <input type="text" id="newItemInput" placeholder="Enter item to add" />
+    <button onclick="addNewItem()">Add Item</button>
+  </div>
+
+  <script>
+    const listManager = (function () {
+      const items = [];
+
+      return {
+        addItem: function (item) {
+          items.push(item);
+          return [...items];
+        },
+        getItems: function () {
+          return [...items];
+        }
+      };
+    })();
+
+    //<!-- Challenge VI-->
+    function printList() {
+      const currentItems = listManager.getItems();
+      if (currentItems.length === 0) {
+        alert("The list is empty.");
+      } else {
+        alert("List of items:\n" + currentItems.join("\n"));
+      }
+    }
+
+    //<!-- Challenge V-->
+    function addNewItem() {
+      const input = document.getElementById('newItemInput');
+      const newItem = input.value.trim();
+
+      if (newItem === "") {
+        alert("Please enter an item to add.");
+        return;
+      }
+
+      listManager.addItem(newItem);
+      alert(`Added "${newItem}" to the list.`);
+      input.value = "";
+    }
+  </script>
+
+</body>
+
+</html>
