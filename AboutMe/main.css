@@ -1,0 +1,28 @@
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: arial;
+  border: 2px solid;
+}
+
+.top-rectangle {
+  display: flex;
+  padding: 20px;
+  border-bottom: 2px solid;
+}
+
+.image-container img {
+  width: 200px;
+  height: auto;
+  border: 1px solid;
+}
+
+.list-container {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.list-container ul {
+  margin: 0;
+  padding-left: 20px;
+}
