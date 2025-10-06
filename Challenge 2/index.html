@@ -12,6 +12,7 @@
 
 <body>
     <div>
+        <img src="an image" alt="an image"/>
         <h1>About</h1>
         <p>Some text about the website.</p>
     </div>
@@ -66,11 +67,11 @@
         <form>
             <div>
                 Name:
-                <input type "text" name="name">
+                <input type="text" name="name">
             </div>
             <div>
-                Email:&nbsp
-                <input type="email">
+                Email:
+                <input type="email" name="email">
             </div>
             <div>
                 Location:
@@ -80,13 +81,15 @@
                 </select>
             </div>
             <div>
-                Gender:
-
-                Female<input type="checkbox" name ="" value="1">
-                Male<input type="checkbox"  name="" value="2">
+                <fieldset>
+                    <legend>Gender:</legend>
+                    
+                    Female<input type="radio" name ="" value="1">
+                    Male<input type="radio"  name="" value="2">
+                </fieldset>
             </div>
             <div>
-                Experience:
+                <legend>Experience:</legend>
                 <textarea name="textarea"></textarea>
             </div>
             <div>
