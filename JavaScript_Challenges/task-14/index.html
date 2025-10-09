@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create a list</title>
+  </head>
+  <body>
+    <h2>My List</h2>
+
+    <ul id="itemList">
+      <li>First Item</li>
+    </ul>
+
+    <button id="addBtn">Add New Item</button>
+
+    <script>
+      let list = document.getElementById("itemList");
+      let button = document.getElementById("addBtn");
+
+      button.addEventListener("click", function() {
+        let newItem = document.createElement("li"); 
+        newItem.textContent = "New Item";
+        list.appendChild(newItem);
+      });
+    </script>
+  </body>
+</html>
