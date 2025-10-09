@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map and Arrow</title>
+  </head>
+  <body>
+    <h2>Original Numbers: 10, 15, 20, 25, 30</h2>
+
+    <button id="showEvens">Show Squares</button>
+
+    <script>
+      const nums = [10, 15, 20, 25, 30];
+      const evens = nums.filter(n=> n%2 === 0);
+
+      document.getElementById("showEvens").addEventListener("click", () => {
+        alert("Only Evens: " + evens.join(", "));
+      });
+    </script>
+  </body>
+</html>
