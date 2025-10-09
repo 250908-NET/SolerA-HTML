@@ -1,5 +1,17 @@
 <p id="text">Change my color!</p>
 
+<div id="container"></div>
+
+<script>
+  let container = document.getElementById("container");
+
+  let newItem = document.createElement("p");
+  newItem.textContent = "This paragraph was added with JS!";
+  container.appendChild(newItem);
+
+  //container.removeChild(newItem);
+</script>
+
 <script>
   let text = document.getElementById("text");
   text.style.color = "Turquoise";
