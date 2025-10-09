@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Switcher</title>
+  </head>
+  <body>
+    <h2>Click the button to change the background color</h2>
+    <button id="colorBtn">Change Color</button>
+
+    <script>
+        const colors = ["Red", "Green", "Blue"];
+        let btn = document.getElementById("colorBtn");
+        let current = 0;
+
+        document.body.style.backgroundColor = colors[current];
+
+        btn.addEventListener("click", function(){
+            current = (current + 1) % colors.length;
+            document.body.style.backgroundColor = colors[current];
+        });
+    </script>
+
+    <style>
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }
+    </style>
+
+    <p id="text">Click to highlight me!</p>
+
+    <script>
+        let text = document.getElementById("text");
+        text.addEventListener("click", function() {
+            text.classList.toggle("highlight");
+        });
+    </script>
+  </body>
+</html>
