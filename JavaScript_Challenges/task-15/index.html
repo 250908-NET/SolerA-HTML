@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Switcher</title>
+  </head>
+  <body>
+    <h2>Click the button to switch images</h2>
+
+    <img id="Art" src="HappyArt.jpg" alt="Happy" width="200">
+    <br><br>
+    <button id="switchBtn">Switch Image</button>
+
+    <script>
+      let img = document.getElementById("Art");
+      let btn = document.getElementById("switchBtn");
+
+      btn.addEventListener("click", function() {
+        if (img.src.includes("HappyArt.jpg")) {
+          img.src = "MadArt.jpg";
+          img.alt = "Mad";
+        } else {
+          img.src = "HappyArt.jpg";
+          img.alt = "Happy";
+        }
+      });
+    </script>
+  </body>
+</html>
