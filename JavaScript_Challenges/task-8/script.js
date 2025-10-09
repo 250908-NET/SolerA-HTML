@@ -1,5 +1,1 @@
-function square() {
-        let num = document.getElementById("numInput").value;
-
-         alert("Your number squared = " + num*num);
-      }
+console.log("Hello from the external script!");
