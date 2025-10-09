@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map and Arrow</title>
+  </head>
+  <body>
+    <h2>Original Numbers: 1, 2, 3, 4, 5</h2>
+
+    <button id="showSquares">Show Squares</button>
+
+    <script>
+      const nums = [1, 2, 3, 4, 5];
+      const squares = nums.map(n => n * n);
+
+      document.getElementById("showSquares").addEventListener("click", () => {
+        alert("Squared: " + squares.join(", "));
+      });
+    </script>
+  </body>
+</html>
