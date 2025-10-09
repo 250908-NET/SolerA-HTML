@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Combining It All</title>
+  </head>
+  <body>
+    <h2>Enter a number:</h2>
+    <input type="text" id="numInput" placeholder="number here">
+    <button onclick="square()">Square Me</button>
+
+    <script>
+      function square() {
+        let num = document.getElementById("numInput").value;
+
+         alert("Your number squared = " + num*num);
+      }
+    </script>
+  </body>
+</html>
